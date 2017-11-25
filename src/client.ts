@@ -13,11 +13,24 @@ import {concatMap} from 'rxjs/operator/concatMap';
 import {filter} from 'rxjs/operator/filter';
 import {map} from 'rxjs/operator/map';
 
-import {HttpHandler} from './backend';
-import {HttpHeaders} from './headers';
-import {HttpParams, HttpParamsOptions} from './params';
-import {HttpRequest} from './request';
-import {HttpEvent, HttpResponse} from './response';
+import { 
+  HttpHandler,
+  HttpHeaders,
+  HttpRequest,
+  HttpEvent,
+  HttpResponse,
+  HttpParams,
+  HttpClient,
+ } from '@angular/common/http';
+
+// import {HttpHandler} from './backend';
+// import {HttpHeaders} from './headers';
+import { 
+  HttpParamsOptions,
+  WebHttpUrlEncodingCodec,
+ } from './params';
+// import {HttpRequest} from './request';
+// import {HttpEvent, HttpResponse} from './response';
 
 
 /**
@@ -60,9 +73,9 @@ export type HttpObserve = 'body' | 'events' | 'response';
  * @stable
  */
 @Injectable()
-export class HttpClient {
+export class WebHttpClient {
   constructor(private handler: HttpHandler) {
-    console.log('yeah, custom HttpClient');
+    console.log('custom HttpClient');
   }
 
   /**
@@ -366,9 +379,19 @@ export class HttpClient {
       let params: HttpParams|undefined = undefined;
       if (!!options.params) {
         if (options.params instanceof HttpParams) {
-          params = options.params;
+          const paramsObject: {[param: string]: string[] | string } = {};
+          for (const param of options.params.keys()) {
+            paramsObject[param] = options.params.getAll(param) || '';
+          }
+          params = new HttpParams({
+            fromObject: paramsObject,
+            encoder: new WebHttpUrlEncodingCodec(),
+          });
         } else {
-          params = new HttpParams({ fromObject: options.params } as HttpParamsOptions);
+          params = new HttpParams({ 
+            fromObject: options.params,
+            encoder: new WebHttpUrlEncodingCodec(),
+           } as HttpParamsOptions);
         }
       }
 
@@ -1128,7 +1151,9 @@ export class HttpClient {
    */
   jsonp<T>(url: string, callbackParam: string): Observable<T> {
     return this.request<any>('JSONP', url, {
-      params: new HttpParams().append(callbackParam, 'JSONP_CALLBACK'),
+      params: new HttpParams({
+        encoder: new WebHttpUrlEncodingCodec(),
+      }).append(callbackParam, 'JSONP_CALLBACK'),
       observe: 'body',
       responseType: 'json',
     });
