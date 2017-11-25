@@ -1,6 +1,6 @@
 {
   "name": "ngx-http-client",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Angular (2+) HttpClientModule with parameter encodings compatible with back ends (Node.js, Python, PHP, etc)",
   "repository": {
     "type": "git",
