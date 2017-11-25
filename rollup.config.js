@@ -2,6 +2,7 @@ const globals = {
   '@angular/core': 'ng.core',
   '@angular/platform-browser': 'ng.platformBrowser',
   '@angular/common': 'ng.common',
+  '@angular/common/http': 'ng.common.http',
   'rxjs/Observable': 'Rx',
   'rxjs/Observer': 'Rx',
   'rxjs/Subject': 'Rx',
