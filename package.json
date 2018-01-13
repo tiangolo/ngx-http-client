@@ -1,6 +1,6 @@
 {
   "name": "ngx-http-client",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.5",
   "description": "Angular (2+) HttpClientModule with parameter encodings compatible with back ends (Node.js, Python, PHP, etc)",
   "repository": {
     "type": "git",
@@ -24,7 +24,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "build": "ng-packagr -p package.json"
   },
   "author": {
     "name": "Sebastián Ramírez",
@@ -32,6 +33,11 @@
     "url": "https://github.com/tiangolo"
   },
   "license": "MIT",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
+  },
   "devDependencies": {
     "@angular/common": "^5.0.2",
     "@angular/core": "^5.0.2",
@@ -41,7 +47,9 @@
     "rxjs": "^5.5.2",
     "typescript": "^2.5.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ng-packagr": "^1.6.0"
+  },
   "peerDependencies": {
     "@angular/common": ">=4.3.0"
   }
