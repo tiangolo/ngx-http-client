@@ -8,8 +8,7 @@
 
 import {DOCUMENT} from '@angular/common';
 import {Inject, Injectable, InjectionToken} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Observer} from 'rxjs/Observer';
+import {Observable, Observer} from 'rxjs';
 
 import {HttpBackend, HttpHandler} from './backend';
 import {HttpRequest} from './request';

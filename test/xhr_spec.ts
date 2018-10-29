@@ -7,7 +7,7 @@
  */
 
 import {ddescribe, describe, iit, it} from '@angular/core/testing/src/testing_internal';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 
 import {HttpRequest} from '../src/request';
 import {HttpDownloadProgressEvent, HttpErrorResponse, HttpEvent, HttpEventType, HttpHeaderResponse, HttpResponse, HttpResponseBase, HttpUploadProgressEvent} from '../src/response';

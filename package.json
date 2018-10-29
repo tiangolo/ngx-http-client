@@ -1,7 +1,7 @@
 {
   "name": "ngx-http-client",
-  "version": "1.0.0-beta.5",
-  "description": "Angular (2+) HttpClientModule with parameter encodings compatible with back ends (Node.js, Python, PHP, etc)",
+  "version": "1.0.1",
+  "description": "Angular (6+) HttpClientModule with parameter encodings compatible with back ends (Node.js, Python, PHP, etc)",
   "repository": {
     "type": "git",
     "url": "https://github.com/tiangolo/ngx-http-client.git"
@@ -39,18 +39,20 @@
     }
   },
   "devDependencies": {
-    "@angular/common": "^5.0.2",
-    "@angular/core": "^5.0.2",
+    "@angular/common": "^6.1.10",
+    "@angular/core": "^6.1.10",
+    "@angular/compiler-cli": "^6.1.10",
+    "@angular/compiler": "^6.1.10",
     "@types/jasmine": "^2.8.2",
     "jasmine": "^2.8.0",
-    "rollup": "^0.51.8",
-    "rxjs": "^5.5.2",
+    "rollup": "^0.66.6",
+    "rxjs": "^6.3.3",
     "typescript": "^2.5.3"
   },
   "dependencies": {
     "ng-packagr": "^1.6.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=4.3.0"
+    "@angular/common": "^6.1.10"
   }
 }

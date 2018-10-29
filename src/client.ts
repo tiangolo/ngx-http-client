@@ -7,11 +7,8 @@
  */
 
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {of } from 'rxjs/observable/of';
-import {concatMap} from 'rxjs/operator/concatMap';
-import {filter} from 'rxjs/operator/filter';
-import {map} from 'rxjs/operator/map';
+import {Observable, of} from 'rxjs';
+import {concatMap, filter, map} from 'rxjs/operators';
 
 import { 
   HttpHandler,

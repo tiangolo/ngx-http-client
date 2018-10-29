@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 
 import {Injector} from '@angular/core';
 import {TestBed} from '@angular/core/testing';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 
 import {HttpHandler} from '../src/backend';
 import {HttpClient} from '../src/client';
