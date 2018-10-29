@@ -1,6 +1,6 @@
 # ngx-http-client
 
-Angular (4.3+) `HttpClientModule` with parameter encodings compatible with back ends (Node.js, Python, PHP, etc). 
+Angular (6+) `HttpClientModule` with parameter encodings compatible with back ends (Node.js, Python, PHP, etc).
 
 ## How to use
 
