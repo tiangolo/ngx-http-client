@@ -50,7 +50,7 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
-    "ng-packagr": "^1.6.0"
+    "ng-packagr": "^4.4.0"
   },
   "peerDependencies": {
     "@angular/common": "^6.1.10"
