@@ -1,6 +1,31 @@
 # ngx-http-client
 
-Angular (4.3+) `HttpClientModule` with parameter encodings compatible with back ends (Node.js, Python, PHP, etc). 
+Angular (4.3+) `HttpClientModule` with parameter encodings compatible with back ends (Node.js, Python, PHP, etc).
+
+## Notice
+
+This package was made to be a quick workaround while the fix in Angular itself was merged, in the PR [#19710](https://github.com/angular/angular/pull/19710).
+
+That PR was created at 2017-10-13. As of 2019-10-19 (2+ years after), it's still waiting to be merged.
+
+This package has some older dependencies, but I'm not currently using Angular.
+
+If you are needing this, the best would be to write a comment in that PR, add a code review approving it, etc. Try to get the attention from the Angular team to accept that PR.
+
+You can also consider other alternatives, like:
+
+* [Vue](https://vuejs.org):
+    * It's a lot easier to learn.
+    * Has less code duplication.
+    * Doesn't force RxJS if you don't need it.
+    * But editor support in the templates is not as good as with Angular in VS Code.
+* [React](https://reactjs.org):
+    * Specifically, modern React, using [`create-react-app` with TypeScript](https://create-react-app.dev/docs/getting-started#creating-a-typescript-app) and using [Hooks](https://reactjs.org/docs/hooks-intro.html).
+    * It's easier to learn.
+    * Has less code duplication.
+    * Doesn't force RxJS if you don't need it.
+    * Editor support, including JSX, is strangely superb, when using TypeScript and Hooks.
+    * But you have to use JSX, which you might not like if you haven't really tried it yet, or if you used React before it had support for TypeScript and Hooks.
 
 ## How to use
 
